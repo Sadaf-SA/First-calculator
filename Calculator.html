@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+
+<head>
+<title>My Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+ rel="stylesheet">
+<style>
+<!-- CSS starts -->
+body{
+height:700px;
+background-color:black;
+}
+
+.container {
+background-color:black;
+}
+
+
+.header{
+text-align:center;
+padding-top:5px;
+color:#FFFFFF;
+font-family: 'Playfair Display', 
+times New roman;
+-webkit-text-stroke:1px #000000;
+}
+
+.row1{
+height:100px;
+width:match-parent;
+}
+
+.result{
+height:75px;
+width:300px;
+padding-left:10px;
+font-size:30px;
+font-weight:bold;
+color:#000000;
+font-family: 'Playfair Display', 
+times New roman;
+}
+
+.clear{
+height:30px;
+width:300px;
+background-color:#FF0027;
+color:#FFFFFF;
+font-size:16px;
+margin-bottom:15px;
+}
+
+
+.row3,
+.row4,
+.row5,
+.row6,
+.row7 {
+margin-bottom:10px;
+height:70px;
+padding-right:25px;
+padding-left:25px;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine {
+background-color:#2D2D2D;
+color:white;
+width:100px;
+height:50px;
+}
+
+#plus,
+#minus,
+#multiply,
+#division,
+#dot {
+background-color:#68CF00;
+color:white;
+width:100px;
+height:50px;
+}
+
+#equal {
+background-color:#00D5FF;
+color:white;
+width:100px;
+height:50px;
+}
+
+input[type="button"] {
+font-size:19px;
+font-weight:bold;
+font-family: 'Playfair Display', 
+times New roman;
+cursor:pointer;
+}
+
+<!-- CSS ends -->
+</style>
+<!-- JavaScript starts -->
+<script>
+
+function clearall () {
+document.getElementById("result").value=""
+}
+
+function screenNum(value) {
+document.getElementById("result").value+=value
+}
+
+</script>
+<!-- JavaScript ends -->
+</head>
+
+<body>
+<div class="container">
+<center>
+<div class="header">
+<h1>My Calculator</h1>
+</div>
+
+<div class="row1">
+
+<input type="text" id="result" class="result"
+value="" onclick="screenNum()" placeholder="" disabled />
+
+</div>
+<div class="row2">
+
+<input type="button" id="clear" class="clear" value="AC"
+onclick="clearall()" />
+
+</div>
+<div class="row3">
+
+<input type="button" id="one" value="1" onclick="screenNum('1')" />
+<input type="button" id="two" value="2" onclick="screenNum('2')" />
+<input type="button" id="three" value="3" onclick="screenNum('3')" />
+
+</div>
+<div class="row4">
+
+<input type="button" id="four" value="4" onclick="screenNum('4')" />
+<input type="button" id="five" value="5" onclick="screenNum('5')" />
+<input type="button" id="six" value="6" onclick="screenNum('6')" />
+
+</div>
+<div class="row5">
+
+<input type="button" id="seven" value="7" onclick="screenNum('7')" />
+<input type="button" id="eight" value="8" onclick="screenNum('8')" />
+<input type="button" id="nine" value="9" onclick="screenNum('9')" />
+
+</div>
+<div class="row6">
+
+<input type="button" id="plus" value="+" onclick="screenNum('+')" />
+<input type="button" id="minus" value="-" onclick="screenNum('-')" />
+<input type="button" id="multiply" value="×" onclick="screenNum('*')" />
+
+</div>
+<div class="row7">
+
+<input type="button" id="division" value="÷" onclick="screenNum('/')" />
+<input type="button" id="dot" value="." onclick="screenNum('.')" />
+<input type="button" id="equal" value="=" onclick="result.value
+=eval(result.value)" />
+
+</div>
+
+</div>
+</center>
+</body>
+<html>
